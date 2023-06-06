@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HtmlObjectBuilder</name>
+    </assembly>
+    <members>
+        <member name="T:HtmlObjectBuilder.Extensions.HtmlNodeExtensions">
+            <summary>
+            Extension methods for <see cref="T:HtmlAgilityPack.HtmlNode"/>.
+            </summary>
+        </member>
+        <member name="M:HtmlObjectBuilder.Extensions.HtmlNodeExtensions.HasClasses(HtmlAgilityPack.HtmlNode,System.String[])">
+            <summary>
+            Returns whether or not this HTML Node contains all of the provided classes.
+            </summary>
+            <param name="node"></param>
+            <param name="classes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HtmlObjectBuilder.HtmlObject">
+            <summary>
+            Used to instantiate an instance of a class from an HTML Node.
+            </summary>
+        </member>
+        <member name="M:HtmlObjectBuilder.HtmlObject.#ctor(System.String)">
+            <summary>
+            Creates object from html.
+            </summary>
+            <param name="html"></param>
+        </member>
+        <member name="M:HtmlObjectBuilder.HtmlObject.#ctor(HtmlAgilityPack.HtmlNode)">
+            <summary>
+            Creates object from the provided HtmlNode.
+            </summary>
+            <param name="objectNode"></param>
+        </member>
+        <member name="M:HtmlObjectBuilder.HtmlObject.GetNodeWithClasses(System.String[])">
+            <summary>
+            Returns the matching node that contains all of the provided classes.
+            </summary>
+            <param name="classes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HtmlObjectBuilder.HtmlObject.GetHtmlProperties">
+            <summary>
+            Returns all of the properties and their corresponding <see cref="T:HtmlObjectBuilder.HtmlPropertyAttribute"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HtmlObjectBuilder.HtmlObject.SetHtmlProperties(System.Collections.Generic.Dictionary{System.Reflection.PropertyInfo,HtmlObjectBuilder.HtmlPropertyAttribute})">
+            <summary>
+            Sets the value of each property with it's corresponding <see cref="T:HtmlObjectBuilder.HtmlPropertyAttribute"/>.
+            </summary>
+            <param name="properties"></param>
+        </member>
+        <member name="T:HtmlObjectBuilder.HtmlPropertyAttribute">
+            <summary>
+            Represents an HTML Property. Used to identify a value from HTML based on it's classes.
+            </summary>
+        </member>
+        <member name="P:HtmlObjectBuilder.HtmlPropertyAttribute.Classes">
+            <summary>
+            Contains all the classes the HTML Attribute should have.
+            </summary>
+        </member>
+    </members>
+</doc>
